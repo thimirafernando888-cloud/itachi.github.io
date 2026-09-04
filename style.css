@@ -1,0 +1,200 @@
+:root {
+    --primary: #9d4edd;
+    --secondary: #7b2cbf;
+    --glow: #c77dff;
+    --dark-bg: rgba(10, 8, 18, 0.65);
+    --border: rgba(157, 78, 221, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* Background Video Setup */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    overflow: hidden;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(5,3,10,0.85) 100%);
+    z-index: -1;
+}
+
+/* Glassmorphism Containers */
+.container {
+    width: 90%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 40px 0;
+    z-index: 1;
+}
+
+.profile-card, .glass-section {
+    background: var(--dark-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.profile-card:hover, .glass-section:hover {
+    border-color: var(--glow);
+    transform: translateY(-2px);
+}
+
+/* Typography & Web3 Elements */
+.badge {
+    display: inline-block;
+    background: rgba(157, 78, 221, 0.2);
+    color: var(--glow);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px var(--glow);
+}
+
+.subtitle {
+    color: #a0a0ab;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.purple-text {
+    color: var(--glow);
+}
+
+/* Grid Layouts */
+.stats-grid, .specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.stat-box {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-box .label {
+    display: block;
+    font-size: 0.75rem;
+    color: #888;
+}
+
+.stat-box .value {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.spec-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(157, 78, 221, 0.05);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.spec-card .icon {
+    font-size: 1.5rem;
+}
+
+.spec-card h3 {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.spec-card p {
+    font-weight: 600;
+}
+
+/* Web3 Button */
+.web3-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 14px;
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(157, 78, 221, 0.4);
+    transition: all 0.2s ease;
+}
+
+.web3-btn:hover {
+    box-shadow: 0 0 25px rgba(199, 125, 255, 0.8);
+    transform: scale(1.01);
+}
+
+.status-box {
+    margin-top: 15px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: var(--glow);
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* Shinra Tensei Push Effect */
+.repulsion-active {
+    animation: gravityPulse 0.6s ease-out;
+}
+
+@keyframes gravityPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.04); filter: brightness(1.5); }
+    100% { transform: scale(1); }
+}
