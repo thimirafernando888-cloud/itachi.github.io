@@ -1,58 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thimira | Portfolio & Hub</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thimira | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <video autoplay loop muted playsinline id="bg-video">
-    <source src="itachi_sharingan.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
-  <div class="overlay"></div>
-
-  <main class="card-container">
-    <header class="profile-header">
-      <h1 class="glow-text">THIMIRA</h1>
-      <p class="subtitle">Student & Tech Enthusiast | 📍 Galle, Sri Lanka</p>
-    </header>
-
-    <section class="info-section">
-      <h2>About Me</h2>
-      <p>Passionate about PC hardware builds, aerospace engineering, space exploration, and language learning. Currently focused on moving to Japan for work.</p>
-    </section>
-
-    <section class="grid-section">
-      <div class="grid-card">
-        <h3>🇯🇵 Japanese Skills</h3>
-        <p>JLPT N5 Certified</p>
-        <span class="badge">JFT-Basic Studying</span>
-      </div>
-
-      <div class="grid-card">
-        <h3>🖥️ Hardware & Tech</h3>
-        <p>Custom PC Building</p>
-        <span class="badge">GTX 1050 Ti Rig</span>
-      </div>
-
-      <div class="grid-card">
-        <h3>🚀 Hobbies</h3>
-        <p>Space & Aerospace</p>
-        <span class="badge">Gaming & Anime</span>
-      </div>
-    </section>
-
-    <div class="actions">
-      <button id="quoteBtn">Reveal Ninja Way</button>
-      <p id="quoteDisplay" class="hidden-quote"></p>
+    <div class="video-container">
+        <video autoplay loop muted playsinline id="bg-video">
+            <source src="bg.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
     </div>
-  </main>
 
-  <script src="script.js"></script>
+    <div class="glow-ring"></div>
+
+    <main class="container">
+        <header class="profile-card">
+            <div class="badge">SYSTEM ACTIVE</div>
+            <h1 class="glitch-text">THIMIRA</h1>
+            <p class="subtitle">Tech Enthusiast & Language Scholar</p>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="label">LOCATION</span>
+                    <span class="value">Galle, LK</span>
+                </div>
+                <div class="stat-box">
+                    <span class="label">STATUS</span>
+                    <span class="value">JLPT N5 Passed</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="glass-section">
+            <h2><span class="purple-text">//</span> CORE HARDWARE</h2>
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <span class="icon">⚡</span>
+                    <div>
+                        <h3>Graphics Engine</h3>
+                        <p>NVIDIA GTX 1050 Ti 4GB</p>
+                    </div>
+                </div>
+                <div class="spec-card">
+                    <span class="icon">🎯</span>
+                    <div>
+                        <h3>Primary Focus</h3>
+                        <p>JFT-Basic & Web3 Tech</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-section">
+            <h2><span class="purple-text">//</span> ALMIGHTY PUSH TERMINAL</h2>
+            <p class="terminal-desc">Click below to trigger the Rinnegan gravity field.</p>
+            <button id="shinra-btn" class="web3-btn">EXECUTE SHINRA TENSEI</button>
+            <div id="status-output" class="status-box">SYSTEM READY...</div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
